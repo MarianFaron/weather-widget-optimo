@@ -1,0 +1,90 @@
+$default-primary: #48484a;
+$default-secoundary: #8a8a8a;
+$white: #fff;
+
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto 16px;
+    background-color: $white;
+    border: 1px solid $default-primary;
+    border-radius: 10px;
+    padding: 12px 24px;
+
+    .column {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &--narrow {
+            max-width: 150px;
+            align-items: center;
+        }
+
+        &--wide {
+            max-width: calc(100% - 180px);
+            margin-right: 30px;
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        &--align-center {
+            align-items: center;
+        }
+
+        &--align-end {
+            align-items: flex-end;
+        }
+
+        > span {
+            display: flex;
+            align-items: flex-end;
+            line-height: 26px;
+            margin: 0 12px;
+        }
+    }
+
+    h2 {
+        margin: 0;
+        color: $default-primary;
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    h3 {
+        margin: 0 12px;
+        font-size: 24px;
+        line-height: 32px;
+        color: $default-primary;
+    }
+
+    p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 24px;
+        color: $default-primary;
+    }
+
+    span {
+        color: $default-secoundary;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    img {
+        max-width: 40px;
+        max-height: 40px;
+        width: 100%;
+        display: block;
+        border: 1px solid $default-primary;
+        margin: 10px;
+        border-radius: 10px;
+    }
+}

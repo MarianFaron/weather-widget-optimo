@@ -1,0 +1,14 @@
+<div class="column column--wide">
+    <div class="row row--align-end">
+        <h2>{{ data().name }}</h2>
+        <span>{{ data().sys.country }}</span>
+    </div>
+    <p><strong>Description: </strong>{{ data().weather[0].description }}</p>    
+</div>
+<div class="column column--narrow">
+    <span>Tempreature</span>
+    <div class="row row--align-center">
+        <img [src]="iconUrl" alt="Ikona pogody">
+        <h3>{{ data().main.temp | kelvinToCelsius }} °C</h3>
+    </div>
+</div>

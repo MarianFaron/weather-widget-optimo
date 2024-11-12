@@ -1,0 +1,17 @@
+<header>
+  <h1>Weather details</h1>
+  <p><strong>Date: </strong>{{ currentDate | date:'medium' }}</p>
+</header>
+<main>
+  @for (data of weatherCity; track data.id) {
+    <div>
+      <app-weather-item 
+        [data]="data"
+        (click)="openExternalLink(data.id)"
+      ></app-weather-item>
+    </div>
+  }
+</main>
+<footer>
+  <p><strong>Reset: </strong> {{ refreshCounter }}s</p>
+</footer>
